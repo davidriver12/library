@@ -1,0 +1,64 @@
+:root {
+    --unread-bg: linear-gradient(to bottom right, #F9B050, #F71717);
+    --read-bg: linear-gradient(to bottom right, #ACFFF5, #57F57C);
+}
+
+h2, h3 {
+    margin: 0px;
+}
+
+.card {
+    background: var(--unread-bg,  red);
+    height: 40vh;
+    width: 15vw;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.read {
+    background: var(--read-bg, green);
+}
+
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+.bg-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal {
+    position: relative;
+    background-color: white;
+    width: 30%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.modal-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
