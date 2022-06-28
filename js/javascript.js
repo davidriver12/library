@@ -2,6 +2,16 @@
 let myLibrary = [];
 let myCards = [];
 
+class Book {
+    constructor(title, author, pages, read){
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+}
+
+/*
 //Book object constructor
 function Book(title, author, pages, read){
     this.author = author
@@ -9,6 +19,7 @@ function Book(title, author, pages, read){
     this.pages = pages
     this.read = read
 }
+*/
 
 //Adds book to array
 Book.prototype.addtoLibrary = function(){
